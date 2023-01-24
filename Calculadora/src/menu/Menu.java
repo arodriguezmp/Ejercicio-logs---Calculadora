@@ -1,8 +1,17 @@
 package menu;
 import java.util.Scanner;
+/**
+ * 
+ * @author ikaslea
+ * @version 1
+ */
 public class Menu {
     private static Scanner teclado = new Scanner(System.in);
     
+    /**
+     * 
+     * @return
+     */
     public int[] pedirNumeros(){
         int[] ret = new int[2];
         System.out.print ("Operando 1: ");
@@ -12,6 +21,10 @@ public class Menu {
         return ret;
     }
     
+    /**
+     * 
+     * @return devuelve el valor que nosotros escribimos para hacer una suma, resta, multiplicacion, division o resto
+     */
     public String menuOpciones() {
         String ret = "";
         do {
@@ -24,11 +37,15 @@ public class Menu {
                 return ret;
     }
     
+    /**
+     * Pregunta al usuario si desea continuar con el programa una vez realizada una operacion
+     * @return devuelve true o false, si es true el programa continua, si es false en programa termina
+     */
     public boolean repetir(){
         boolean ret = false;
         String respuesta;
         do {
-            System.out.print ("¿Desea continuar trabajando con la calculadora? [s / n]");
+            System.out.print ("ï¿½Desea continuar trabajando con la calculadora? [s / n]");
             respuesta = teclado.next();
         } while (!((respuesta.equalsIgnoreCase("s")) || (respuesta.equalsIgnoreCase("n"))
                     ));
